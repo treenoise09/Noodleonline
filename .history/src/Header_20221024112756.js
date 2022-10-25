@@ -2,7 +2,6 @@ import React from "react";
 import './Header.css'
 import Logo from './img/Onlinenoodle-logos_transparent.png'
 import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 function Header() {
     return(
@@ -31,9 +30,9 @@ function Header() {
                         Location
                     </span>
             </div>
-            <div className="header_optionBasket">
-            <ShoppingBasketIcon/>
-            <span className="header_optionLineTwo header_basketCount">0</span>
+            <div className="header_Option">
+                            
+                <span className="header_optionLineTwo">Orders</span>
             </div>
         </div>
         </div>

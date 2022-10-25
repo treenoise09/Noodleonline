@@ -31,9 +31,10 @@ function Header() {
                         Location
                     </span>
             </div>
-            <div className="header_optionBasket">
-            <ShoppingBasketIcon/>
-            <span className="header_optionLineTwo header_basketCount">0</span>
+            <div className="header_Option">
+                            
+                <span className="header_optionLineTwo">Orders</span>
+                <ShoppingBasketIcon/>
             </div>
         </div>
         </div>
