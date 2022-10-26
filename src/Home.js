@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Home.css";
-import BG from "./img/pexels.jpg"
+import BG from "./img/Layer 1.png"
 import Noodle from './Noodle';
 import Logo from "./img/noodle.gif";
 
@@ -14,6 +14,11 @@ function Home() {
               title="เส้นเล็ก"
               price={30}
               img={Logo}/>
+               <div>
+              <Noodle
+              title="เส้นเล็ก"
+              price={30}
+              img={Logo}/></div>
             </div>
             </div>
     </div>
