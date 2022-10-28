@@ -4,10 +4,10 @@ import { useStateValue } from './stateprovider';
 
 
 function Noodle({id,title,img,price}) {
-  const [{basket},dispatch] = useStateValue();
+  const [state,dispatch] = useStateValue();
   const addTobasket = () => {
         dispatch({
-          type:"ADD_TO_BASKET",
+          type:"AD_TO_BASKET",
           item:{
             id: id,
             title: title,
