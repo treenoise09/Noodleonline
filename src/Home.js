@@ -9,16 +9,15 @@ function Home() {
     <div className='home'>
         <div className='home_container'>
             <img className='Home_img' src={BG} alt=''/>
-            <div className='Home_row'>
+            <div className='home_row'>
               <Noodle
               title="เส้นเล็ก"
               price={30}
               img={Logo}/>
-               <div>
               <Noodle
               title="เส้นเล็ก"
               price={30}
-              img={Logo}/></div>
+              img={Logo}/>
             </div>
             </div>
     </div>
