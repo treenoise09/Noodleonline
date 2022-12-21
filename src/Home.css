@@ -1,3 +1,8 @@
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 700px;
+}
 .Home_img{
     width: 100%;
     z-index: -1;
@@ -6,15 +11,70 @@
 }
 .home{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-left: auto;
     margin-right: auto;
     max-width: 1500px;
 }
 .home_row{
-    display: flex;
-    flex-direction: row;
-    z-index: 1;
-    margin-left: 5px;
-    margin-right: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+    justify-items: center;
+    top: -115px;
+    position: relative;
 }
+.busket{
+    overflow: auto;
+    height: 450px;
+    background: #fff;
+    scroll-padding-top: 300px;  
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background: rgba(0,0,0,0.4);
+  }
+  ::-webkit-scrollbar-thumb:active{
+    background: rgba(0,0,0,.9);
+  }
+  .cheackout_right{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 60px;
+    height: fit-content;
+  }
+  .icon{
+    width: 15px;
+    height: 15px;
+  }
+  .buttom{
+    padding: 1px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    z-index: 2;
+    position: relative;
+    width: 150px;
+  }
+  .row{
+    justify-content: space-around;
+    height: 30px;
+    z-index: 2;
+    width: 365px;
+    display: flex;
+    position: relative;
+    left: 350px;
+    top: -125px;
+  }
+  
