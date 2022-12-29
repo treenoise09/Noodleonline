@@ -18,10 +18,10 @@ function Home() {
     <div className='home'>
         <div className='home_container'>
             <img className='Home_img' src={BG} alt=''/>
-            <div className='row'>
-            <Button size="lg" variant="light"><img className='icon' src={sen}></img>Noodle</Button>{' '}
-            <Button size="lg" variant="light"><img className='icon' src={drink}></img>Drink</Button>{' '}
-            <Button size="lg" variant="light"><img className='icon' src={sweet}></img>Dessert</Button>{' '}
+            <div className='row' style={{flexWrap:'nowrap',display:'flex',justifyContent:'space-around'}} >
+            <div><Button size="lg" variant="light" style={{display:'flex',alignItems:'center',justifyContent:'center',width:'100%'}} ><img className='icon' src={sen}></img>Noodle</Button>{' '}</div>
+            <div><Button size="lg" variant="light" style={{display:'flex',alignItems:'center',justifyContent:'center',width:'100%'}} ><img className='icon' src={drink}></img>Drink</Button>{' '}</div>
+            <div><Button size="lg" variant="light" style={{display:'flex',alignItems:'center',justifyContent:'center',width:'100%'}} ><img className='icon' src={sweet}></img>Dessert</Button>{' '}</div>
             
             </div>
             <div className='home_row'>
@@ -83,6 +83,8 @@ function Home() {
                 img={item.img}
                 title={item.title}
                 price={item.price}
+                status={item.status}
+                option={item.option}
                 />))}</div>
                     <Subtotal/>
         </div>

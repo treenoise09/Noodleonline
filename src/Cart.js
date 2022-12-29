@@ -19,6 +19,8 @@ function Cart() {
                 img={item.img}
                 title={item.title}
                 price={item.price}
+                status={item.status}
+                option={item.option}
                 />))}
             </div>
         </div>

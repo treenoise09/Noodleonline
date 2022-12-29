@@ -18,7 +18,7 @@ html{
 }
 .home_row{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
     grid-gap: 0px;
     justify-items: center;
     top: -115px;
@@ -51,17 +51,17 @@ html{
   .cheackout_right{
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 60px;
+    top: 65px;
     height: fit-content;
   }
   .icon{
     width: 15px;
     height: 15px;
   }
-  .buttom{
+  .Button{
     padding: 1px;
     background-color: #fff;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
     z-index: 2;
     position: relative;
@@ -76,5 +76,6 @@ html{
     position: relative;
     left: 350px;
     top: -125px;
+    flex-wrap: nowrap;
   }
   
