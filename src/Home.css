@@ -78,4 +78,27 @@ html{
     top: -125px;
     flex-wrap: nowrap;
   }
-  
+  @media screen and (max-width: 600px) {
+    .home {
+      flex-wrap: wrap; /* Allows the elements inside the container to wrap to the next line */
+    }
+    .home_row {
+      grid-template-columns: repeat(2, 50%); /* Changes the number of columns to 2 */
+    }
+    .busket {
+      height: auto; /* Allows the height to adjust to the content inside */
+    }
+    .cheackout_right {
+      position: relative; /* Removes the sticky position */
+      top: 0; /* Removes the offset */
+    }
+    .row {
+      justify-content: center; /* Centers the elements inside the container */
+      left: 0; /* Removes the offset */
+      top: 0; /* Removes the offset */
+      width: 100%; /* Makes the container fill the full width */
+    }
+    .Button {
+      width: 100%; /* Makes the button fill the full width of the container */
+    }
+  }

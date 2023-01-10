@@ -56,3 +56,18 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+.Card {
+    padding: 1px;
+    width: 600px;
+    justify-content: center;
+    top: 50px;
+    background-color: white;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 .125rem .25rem #00000013!important;
+    position: relative;
+}
+.BD{
+    justify-content: center;
+    display: flex;
+}
