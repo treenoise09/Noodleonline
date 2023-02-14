@@ -10,6 +10,7 @@ import Subtotal from "./Subtotal";
 import { useStateValue } from "./stateprovider";
 import CartProduct from "./CartProduct";
 import Button from "react-bootstrap/Button";
+import { Col, Container, Row } from "react-bootstrap";
 
 function Home() {
   const [{ basket }, dispatch] = useStateValue();
@@ -17,30 +18,25 @@ function Home() {
     <div className="home">
       <div className="home_container">
         <img className="Home_img" src={BG} alt="" />
-        <div
-          className="row"
-          style={{
-            flexWrap: "nowrap",
-            display: "flex",
-            justifyContent: "space-around",
-          }}
-        >
-          <div>
+        <Container>
+          <Row>
+          <Col lg={{ span: 2, offset: 6 }}>
             <Button size="lg" variant="light">
               <img className="icon" src={sen}></img>Noodle
             </Button>{" "}
-          </div>
-          <div>
+          </Col>
+          <Col lg={{ span: 2, offset: 6 }}>
             <Button size="lg" variant="light">
               <img className="icon" src={drink}></img>Drink
             </Button>{" "}
-          </div>
-          <div>
+          </Col>
+          <Col lg={{ span: 2, offset: 6 }}>
             <Button size="lg" variant="light">
               <img className="icon" src={sweet}></img>Dessert
             </Button>{" "}
-          </div>
-        </div>
+          </Col>
+          </Row>
+        </Container>
         <div className="home_row">
           <Noodle title="เส้นเล็ก" price={30} img={Logo} />
           <Noodle title="เส้นใหญ่" price={30} img={Logo} />
@@ -52,6 +48,7 @@ function Home() {
           <Noodle title="บะหมี่เส้นผัก" price={30} img={Logo} />
         </div>
       </div>
+      <div> {basket?.length!=0&&(
       <div className="cheackout_right">
         <div className="busket">
           {basket.map((item) => (
@@ -66,6 +63,7 @@ function Home() {
           ))}
         </div>
         <Subtotal />
+        </div>)}
       </div>
     </div>
   );

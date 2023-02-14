@@ -92,12 +92,6 @@ html{
       position: relative; /* Removes the sticky position */
       top: 0; /* Removes the offset */
     }
-    .row {
-      justify-content: center; /* Centers the elements inside the container */
-      left: 0; /* Removes the offset */
-      top: 0; /* Removes the offset */
-      width: 100%; /* Makes the container fill the full width */
-    }
     .Button {
       width: 100%; /* Makes the button fill the full width of the container */
     }
