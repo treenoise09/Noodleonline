@@ -20,17 +20,17 @@ function Home() {
         <img className="Home_img" src={BG} alt="" />
         <Container>
           <Row>
-          <Col lg={{ span: 2, offset: 6 }}>
+          <Col lg={{ span: 1, offset: 1 }}>
             <Button size="lg" variant="light">
               <img className="icon" src={sen}></img>Noodle
             </Button>{" "}
           </Col>
-          <Col lg={{ span: 2, offset: 6 }}>
+          <Col lg={{ span: 1, offset: 3 }}>
             <Button size="lg" variant="light">
               <img className="icon" src={drink}></img>Drink
             </Button>{" "}
           </Col>
-          <Col lg={{ span: 2, offset: 6 }}>
+          <Col lg={{ span: 1, offset: 3 }}>
             <Button size="lg" variant="light">
               <img className="icon" src={sweet}></img>Dessert
             </Button>{" "}

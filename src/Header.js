@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Header.css";
 import Logo from "./img/Onlinenoodle-logos_transparent.png";
 import SearchIcon from "@mui/icons-material/Search";
@@ -18,6 +18,7 @@ import {
   MDBInput,
   MDBCheckbox,
 } from "mdb-react-ui-kit";
+
 function Header() {
   const [{ basket }, dispatch] = useStateValue();
   const [justifyActive, setJustifyActive] = useState("tab1");
@@ -33,6 +34,25 @@ function Header() {
 
     setJustifyActive(value);
   };
+  const [province, setProvince] = useState("");
+
+  useEffect(() => {if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const { latitude, longitude } = position.coords;
+
+      const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+      
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          setProvince(data.address.state);
+        })
+        .catch((error) => console.log(error));
+    });
+  } else {
+    console.log("Geolocation is not supported by this browser.");
+  }
+}, []);
 
   return (
     <div className="header">
@@ -243,7 +263,7 @@ function Header() {
         </div>
         <div className="header_option">
           <span className="header_optionLineOne">Your</span>
-          <span className="header_optionLineTwo">Location</span>
+          <span className="header_optionLineTwo">Location{province}</span>
         </div>
         <Link to="/checkout">
           <div className="header_optionBasket">
