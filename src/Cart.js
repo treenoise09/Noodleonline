@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CartProduct from './CartProduct'
 import Subtotal from './Subtotal'
 import './Cart.css'
@@ -11,15 +11,16 @@ function Cart() {
         <div className='checkout_left'>
             <div>
                 <h2 className='cheakout_title'>
-                    Your Shopping Basket
+                    ตะกร้าของคุณ
                 </h2>
-                {basket.map(item =>(
-                <CartProduct
-                id={item.id}
-                img={item.img}
-                title={item.title}
-                price={item.price}
-                />))}
+                {basket.map((item, index) => (
+  <CartProduct
+    key={item.id + index}
+    id={item.id}
+    title={item.title}
+    price={item.price}
+  />
+))}
             </div>
         </div>
         <div className='cheackout_right'>

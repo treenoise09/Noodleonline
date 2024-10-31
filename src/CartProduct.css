@@ -1,13 +1,15 @@
 .cartProduct{
-    display: flex;
+    display: grid;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .cartProduct_info{
     padding-left: 20px;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
 }
 .cartProduct_info > button{
-    background: #f0c14b;
+    background: #f0c14b;    
     border: 1px solid;
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;

@@ -1,0 +1,16 @@
+table {
+    width: 100%; /* Make the table fill the modal */
+    border-collapse: collapse; /* Optional: for better border handling */
+  }
+  .order-id, .status, .change-status {
+    width: 15%; /* Adjust the width as needed */
+  }
+  
+  .items-and-time {
+    width: 40%; /* Adjust the width as needed */
+  }
+  
+  .total-quantity {
+    width: 15%; /* Adjust the width as needed */
+  }
+    

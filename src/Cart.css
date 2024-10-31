@@ -1,9 +1,13 @@
 .Cart{
-    display: flex;
+    position: fixed;
+    top: 40px;
+    right: 0;
+    width: 300px; /*adjust as needed*/
+    height: 100vh;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
     padding: 20px;
-    background-color: white;
-    height: max-content;
-    justify-content: space-between;
+    overflow-y: scroll; /*in case the contents exceed the height*/
 }
 .checkout_title{
     margin-right: 10px;

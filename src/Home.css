@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+.home_title {
+  font-family: 'Sriracha', cursive;
+}
+
+
 .Home_img{
     width: 100%;
     z-index: -1;
@@ -11,10 +18,63 @@
     margin-right: auto;
     max-width: 1500px;
 }
-.home_row{
+.home_row {
+  display: flex;
+  flex-direction: row; /* Adjusted from column to row */
+  flex-wrap: wrap; /* This will allow items to wrap to the next line */
+  gap: 10px; /* This is the space between the items */
+  justify-content: flex-start; /* Aligns items to the start of the row */
+}
+  .noodleRow {
     display: flex;
     flex-direction: row;
-    z-index: 1;
-    margin-left: 5px;
-    margin-right: 5px;
+    width: 100%; /* Adjust as needed */
+    /* Add other styles as needed */
+  }
+  .home_image_wrapper {
+    position: relative;
 }
+
+.home_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; 
+    text-shadow: 2px 2px 4px #000000;
+}
+.noodleRow {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: flex-start; /* Align items to the start */
+  gap: 10px; /* Adjust the gap between items */
+}
+
+/* Default, small screens, each item takes full width */
+.noodleItem {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+.noodleItem {
+  flex: 1; /* Allows the item to grow and take available space */
+  min-width: 120px; /* The minimum width of each item */
+  max-width: calc(100% / 6 - 10px); /* Adjust the denominator for the number of items per row */
+  margin: 5px; /* Spacing around each item */
+}
+
+/* Medium screens, 2 items per row */
+@media (min-width: 600px) {
+  .noodleItem {
+    flex-basis: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+/* Large screens, 6 items per row */
+@media (min-width: 1200px) {
+  .noodleItem {
+    flex-basis: calc(100% / 6 - 10px);
+    max-width: calc(100% / 6 - 10px);
+  }
+}
+

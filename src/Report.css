@@ -1,0 +1,25 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .column {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  .chart-container {
+    width: 80%; /* You can set the width to whatever you want */
+    height: 450px; /* You can set the height to whatever you want */
+    margin: auto; /* Optional: centers the chart */
+  }
+  

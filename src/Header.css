@@ -13,10 +13,20 @@
     align-items: center;
     border-radius: 24px;
 }
+@font-face {
+    font-family: 'YourFont';
+    src: url('./asset/KoneRomiCuteThin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.searchLogo{
+font-family: "YourFont";
+font-weight: bold;
+}
 .header_searchInput{
     height: 12px;
     padding: 10px;
-    border: none;
+    border: 1px solid black;
     width: 100%;
 }
 .header_searchIcon{
@@ -56,3 +66,19 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+.Location {
+    display: flex;
+    justify-content: space-around; /* or 'space-between' if you prefer */
+    align-items: center;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Add a gap between elements */
+  }
+  .time{
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Add a gap between elements */
+  }
+  
